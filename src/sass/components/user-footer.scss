@@ -1,0 +1,6 @@
+.user-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@import './user-footer-item.scss';

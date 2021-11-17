@@ -1,0 +1,12 @@
+.user-statistics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 32px;
+  margin-bottom: 37px;
+  color: var(--color-text);
+  background: var(--colors-bg);
+  border-radius: 10px;
+}
+
+@import './user-statistics-item.scss';

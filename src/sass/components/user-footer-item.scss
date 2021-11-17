@@ -1,0 +1,21 @@
+.user-footer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 21px;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 15px;
+    fill: var(--colors-icon);
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--color-text);
+  }
+}

@@ -2,7 +2,6 @@ export const mode = () => {
   const bodyTheme = document.body;
   const modeSwitcher = document.querySelector('.mode');
   const [modeName, modeIcon] = modeSwitcher.children;
-  
   modeSwitcher.addEventListener('click', () => {
     if (bodyTheme.dataset.theme === 'light') {
       bodyTheme.dataset.theme = 'dark';

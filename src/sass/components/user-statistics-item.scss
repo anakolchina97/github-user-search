@@ -1,0 +1,19 @@
+.user-statistics-item {
+  &__title {
+    margin-bottom: 1px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: var(--color-text);
+  }
+
+  &__count {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: var(--color-bold);
+  }
+}

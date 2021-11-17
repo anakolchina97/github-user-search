@@ -1,0 +1,42 @@
+.user-info {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+  }
+
+  &__name {
+    color: var(--color-bold);
+  }
+
+  &__joined {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: right;
+
+    color: var(--color-mood);
+  }
+
+  &__login {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__bio {
+    margin-bottom: 32px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--color-text);
+  }
+}
+
+@import './user-statistics.scss';

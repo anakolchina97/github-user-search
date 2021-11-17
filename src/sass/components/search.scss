@@ -23,6 +23,10 @@
     color: var(--color-text);
     background: var(--colors-cover);
 
+    &::placeholder {
+      color: var(--color-text);
+    }
+
     &::-ms-clear,
     &::-ms-reveal { display: none; width: 0px; height: 0px; }
     &::-webkit-search-decoration,

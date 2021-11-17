@@ -1,18 +1,26 @@
 body[data-theme='light'] {
+  --color-primary: #0079FF;
   --colors-bg: #F6F8FF;
   --colors-cover: #FEFEFE;
   --colors-title: #222731;
   --color-text: #4B6A9B;
   --color-mood: #697C9A;
+  --color-bold: #2B3442;
+  --colors-icon: var(--color-text);
   --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+
+  --icon-color: ;
 }
 
 body[data-theme='dark'] {
+  --color-primary: #0079FF;
   --colors-bg: #141D2F;
   --colors-cover: #1E2A47;
   --colors-title: #FFFFFF;
   --color-text: #FFFFFF;
   --color-mood: #FFFFFF;
+  --color-bold: #FFFFFF;
+  --colors-icon: var(--color-text);
   --shadow: none;
 }
 

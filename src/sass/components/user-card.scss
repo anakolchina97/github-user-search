@@ -1,3 +1,23 @@
 .user-card {
+  display: grid;
+  grid-gap: 37px;
+  grid-template-columns: 117px 1fr;
+  padding: 48px;
+  padding-bottom: calc(48px - 21px);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
   background: var(--colors-cover);
+
+  &__photo {
+    width: 117px;
+    height: 117px;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
 }
+
+@import './user-info.scss';
+@import './user-footer.scss';
