@@ -6,6 +6,11 @@
     font-size: 13px;
     line-height: 19px;
     color: var(--color-text);
+
+    @media (max-width: 575px) {
+      font-size: 11px;
+      line-height: 16px;
+    }
   }
 
   &__count {
@@ -15,5 +20,10 @@
     line-height: 33px;
     text-transform: uppercase;
     color: var(--color-bold);
+
+    @media (max-width: 575px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }

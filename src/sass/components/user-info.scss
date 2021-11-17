@@ -5,7 +5,7 @@
     justify-content: space-between;
     margin-bottom: 2px;
 
-    @media  (max-width: 767px) {
+    @media (max-width: 767px) {
       display: flex;
       justify-content: flex-start;
       margin-bottom: 24px;
@@ -22,6 +22,11 @@
     font-size: 15px;
     line-height: 22px;
     color: var(--color-mood);
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+      line-height: 19px;
+    }
   }
 
   &__login {
@@ -32,8 +37,13 @@
     font-size: 16px;
     line-height: 24px;
 
-    @media  (max-width: 767px) {
+    @media (max-width: 767px) {
       margin-bottom: 4px;
+    }
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+      line-height: 19px;
     }
   }
 
@@ -44,6 +54,11 @@
     font-size: 15px;
     line-height: 25px;
     color: var(--color-text);
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+      margin-bottom: 23px;
+    }
   }
 }
 

@@ -9,6 +9,10 @@
 
   &__icon {
     padding: 0px 24px 0px 22px;
+
+    @media (max-width: 575px) {
+      padding: 0px 10px 0px 6px;
+    }
   }
 
   &__input {
@@ -22,6 +26,10 @@
     line-height: 25px;
     color: var(--color-text);
     background: var(--colors-cover);
+
+    @media (max-width: 575px) {
+      font-size: 13px;
+    }
 
     &::placeholder {
       color: var(--color-text);
