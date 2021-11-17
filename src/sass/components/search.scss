@@ -36,14 +36,32 @@
     }
 
     &::-ms-clear,
-    &::-ms-reveal { display: none; width: 0px; height: 0px; }
+    &::-ms-reveal {
+      display: none;
+      width: 0px;
+      height: 0px;
+    }
+
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
     &::-webkit-search-results-button,
-    &::-webkit-search-results-decoration { display: none; }
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
   }
 
-  &__button {
+  &__danger {
+    opacity: 0;
+    flex-shrink: 0;
+    margin-right: 24px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 22px;
+    color: $danger-color;
 
+    @media (max-width: 575px) {
+      display: none;
+    }
   }
 }

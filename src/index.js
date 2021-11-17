@@ -31,10 +31,11 @@ const mappingUser = (value) => {
   
   const userJoined = document.querySelector('.user-info__joined');
   const date = new Date(created_at);
-  userJoined.textContent = `Joined ${date.getFullYear()} ${date.toLocaleDateString('ru-RU', {month: 'long'})} ${date.getDate()}`;
+  userJoined.textContent = `Joined ${date.getDate()} ${date.toLocaleDateString('default', {month: 'short'})} ${date.getFullYear()}`;
 
-  const userName = document.querySelector('.user-info__login');
-  userName.textContent = `@${login}`;
+  const userName = document.querySelectorAll('.user-info__login').forEach((username) => {
+    username.textContent = `@${login}`;
+  });
 
   const userBio = document.querySelector('.user-info__bio');
   userBio.textContent = bio;
@@ -49,7 +50,6 @@ const mappingUser = (value) => {
     if (userFooterData[index] === null) {
       item.textContent = 'Not Available';
       item.parentElement.classList.add('disabled');
-      console.log(item.parentElement)
     } else {
       item.textContent = userFooterData[index]
       item.parentElement.classList.remove('disabled');
@@ -61,12 +61,19 @@ const getSearchValue = () => {
   const btnSearch = document.querySelector('.search__btn');
 
   const handledSearchValue = () => {
+    const searchDanger = document.querySelector('.search__danger');
     const inputSearch = document.querySelector('.search__input').value;
-    
-    getDataUser(inputSearch).then((user) => {
-      console.log(user)
-      mappingUser(user);
-    });  
+
+    if (!inputSearch) {
+      searchDanger.style.opacity = 1;
+    } else {
+      getDataUser(inputSearch).then((user) => {
+        mappingUser(user);
+        searchDanger.style.opacity = 0;
+      }); 
+    }
+
+    document.querySelector('.search__input').value = "";
   }
 
   btnSearch.addEventListener('click', handledSearchValue);

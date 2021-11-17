@@ -12,6 +12,17 @@
     }
   }
 
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    @media (max-width: 765px) {
+      display: block;
+    }
+  }
+
   &__name {
     color: var(--color-bold);
   }
