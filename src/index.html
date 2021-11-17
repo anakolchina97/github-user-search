@@ -6,24 +6,24 @@
   <title>GitHub user search app</title>
 </head>
 <body data-theme="light">
-  <div id="app">
+  <div id="app" class="container">
     <header class="header">
       <div class="header__logo">
         devfinder
       </div>
       <div class="header__mode mode">
         <div class="mode__name">
-          Dark | Light
+          Dark
         </div>
-        <div class="mode__icon">
-          <img src="./images/icon-moon.svg" alt="icon-moon">
-        </div>
+        <i class="mode__icon mode__icon_moon"></i>
       </div>
     </header>
     <section class="search">
-      <img src="./images/icon-search.svg" alt="icon-search">
-      <input type="search" placeholder="Search GitHub username...">
-      <button>Search</button>
+      <div class="search__icon">
+        <img src="./images/icon-search.svg" alt="icon-search">
+      </div>
+      <input class="search__input" type="search" placeholder="Search GitHub username...">
+      <button class="search__btn btn btn-primary">Search</button>
     </section>
     <section class="user-card">
       <div class="user-card__photo">
@@ -71,15 +71,5 @@
       </section>
     </section>
   </div>
-  
-  
-  
-
-  
-
-  Repos
-  Followers
-  Following
-
 </body>
 </html>

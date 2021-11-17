@@ -1,6 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import './var.scss';
+// Fonts
+@import './fonts/index.scss';
 
-body {
-  font-family: 'Space Mono', monospace;
-}
+// Tools
+@import './tools/var.scss';
+
+// Global
+@import './global/index..scss';
+
+// Components
+@import './components/header.scss';
+@import './components/mode.scss';
+@import './components/search.scss';
+@import './components/button.scss';

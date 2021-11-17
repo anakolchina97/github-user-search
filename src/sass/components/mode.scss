@@ -1,0 +1,33 @@
+.mode {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &__name {
+    color: var(--color-mood);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-right: 16px;
+  }
+
+  &__icon {
+    &_moon {
+      width: 20px;
+      height: 20px;
+      background: url('../images/icon-moon.svg') 0 0;
+      background-size: contain;
+    }
+
+    &_sun {
+      width: 20px;
+      height: 20px;
+      background: url('../images/icon-sun.svg') 0 0;
+      background-size: contain;
+    }
+  }
+}
