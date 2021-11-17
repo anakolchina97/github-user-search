@@ -5,17 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GitHub user search app</title>
 </head>
-<body>
+<body data-theme="light">
+  <div id="app">
+    <header class="header">
+      <div class="header__logo">
+        devfinder
+      </div>
+      <div class="header__mode mode">
+        <div class="mode__name">
+          Dark | Light
+        </div>
+        <div class="mode__icon">
+          <img src="./images/icon-moon.svg" alt="icon-moon">
+        </div>
+      </div>
+    </header>
+    <section class="search">
+      <img src="./images/icon-search.svg" alt="icon-search">
+      <input type="search" placeholder="Search GitHub username...">
+      <button>Search</button>
+    </section>
+    <section class="user-card">
+      <div class="user-card__photo">
+        <img src="./images/bitmap.png" alt="bitmap">
+      </div>
+      <section class="user-card__info user-info">
+        <header class="user-info__header">
+          <h1 class="user-info__name">The Octocat</h1>
+          <p class="user-info__joined">Joined 25 Jan 2011</p>
+        </header>
+        <p class="user-info__login">@octocat</p>
+        <p class="user-info__bio">This profile has no bio</p>
+        <section class="user-info__statistics user-statistics">
+          <div class="user-statistics__item user-statistics-item">
+            <p class="user-statistics-item__title">Repos</p>
+            <div class="user-statistics-item__count">8</div>
+          </div>
+          <div class="user-statistics__item user-statistics-item">
+            <p class="user-statistics-item__title">Followers</p>
+            <div class="user-statistics-item__count">3938</div>
+          </div>
+          <div class="user-statistics__item user-statistics-item">
+            <p class="user-statistics-item__title">Following</p>
+            <div class="user-statistics-item__count">9</div>
+          </div>
+        </section>
+        <footer class="user-info__footer user-footer">
+          <div class="user-footer__item user-footer-item">
+            <i class="user-footer-item__icon user-footer-item__icon_location"></i>
+            <span class="user-footer-item__title">San Francisco</span>
+          </div>
+          <div class="user-footer__item user-footer-item">
+            <i class="user-footer-item__icon user-footer-item__icon_twitter"></i>
+            <span class="user-footer-item__title">Not Available</span>
+          </div>
+          <div class="user-footer__item user-footer-item">
+            <i class="user-footer-item__icon user-footer-item__icon_link"></i>
+            <span class="user-footer-item__title">https://github.blog</span>
+          </div>
+          <div class="user-footer__item user-footer-item">
+            <i class="user-footer-item__icon user-footer-item__icon_work"></i>
+            <span class="user-footer-item__title">@githubg</span>
+          </div>
+        </footer>
+      </section>
+    </section>
+  </div>
+  
+  
+  
 
-  devfinder
-
-  Light
-  Dark
-
-  Search GitHub username...
-  Search
-
-  Joined
+  
 
   Repos
   Followers
