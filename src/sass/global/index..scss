@@ -22,9 +22,14 @@ h1 {
   line-height: 39px;
 }
 
-.container {
+.app-container {
   max-width: calc(730px + (15px * 2));
   width: 100%;
   margin: auto;
   padding: 0 15px;
+
+  @media (max-width: 767px) {
+    max-width: calc(573px + (98px * 2));
+    padding: 0 98px;
+  }
 }

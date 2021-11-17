@@ -8,9 +8,19 @@
   box-shadow: var(--shadow);
   background: var(--colors-cover);
 
+  @media (max-width: 767px) {
+    display: block;
+  }
+
   &__photo {
     width: 117px;
     height: 117px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @media  (max-width: 767px) {
+      margin-right: 40px;
+    }
 
     img {
       height: auto;

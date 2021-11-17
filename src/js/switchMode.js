@@ -1,4 +1,4 @@
-export const mode = () => {
+export const switchMode = () => {
   const bodyTheme = document.body;
   const modeSwitcher = document.querySelector('.mode');
   const [modeName, modeIcon] = modeSwitcher.children;

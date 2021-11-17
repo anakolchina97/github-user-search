@@ -4,6 +4,12 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2px;
+
+    @media  (max-width: 767px) {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 24px;
+    }
   }
 
   &__name {
@@ -15,8 +21,6 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 22px;
-    text-align: right;
-
     color: var(--color-mood);
   }
 
@@ -27,6 +31,10 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
+
+    @media  (max-width: 767px) {
+      margin-bottom: 4px;
+    }
   }
 
   &__bio {

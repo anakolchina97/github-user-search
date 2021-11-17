@@ -1,6 +1,7 @@
 .user-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: inline-grid;
+  gap: 0px 40px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @import './user-footer-item.scss';

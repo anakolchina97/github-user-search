@@ -7,9 +7,8 @@ body[data-theme='light'] {
   --color-mood: #697C9A;
   --color-bold: #2B3442;
   --colors-icon: var(--color-text);
+  --colors-disabled: rgba(75,106,155, 0.5);
   --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-
-  --icon-color: ;
 }
 
 body[data-theme='dark'] {
@@ -21,6 +20,7 @@ body[data-theme='dark'] {
   --color-mood: #FFFFFF;
   --color-bold: #FFFFFF;
   --colors-icon: var(--color-text);
+  --colors-disabled: rgba(255, 255, 255, 0.5);
   --shadow: none;
 }
 
