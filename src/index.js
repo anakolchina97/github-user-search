@@ -8,44 +8,50 @@ switchMode();
 
 const mappingUser = (value) => {
   const {
-    avatar_url, 
-    name, 
-    created_at, 
-    login, 
-    bio, 
-    public_repos, 
-    followers, 
-    following, 
-    location, 
-    html_url, 
-    twitter_username, 
+    avatar_url: avatarUrl,
+    name,
+    created_at: createdAt,
+    login,
+    bio,
+    public_repos: publicRepos,
+    followers,
+    following,
+    location,
+    html_url: htmlUrl,
+    twitter_username: twitterUserName,
     company
-  } = value;  
+  } = value;
 
-  const userPhoto = document.querySelectorAll('.user-card__photo img').forEach((photo) => {
-    photo.setAttribute('src', avatar_url);  
+  document.querySelectorAll('.user-card__photo img').forEach((photo) => {
+    photo.setAttribute('src', avatarUrl);
   });
-  
+
   const userFirstName = document.querySelector('.user-info__name');
   userFirstName.textContent = name;
-  
-  const userJoined = document.querySelector('.user-info__joined');
-  const date = new Date(created_at);
-  userJoined.textContent = `Joined ${date.getDate()} ${date.toLocaleDateString('default', {month: 'short'})} ${date.getFullYear()}`;
 
-  const userName = document.querySelectorAll('.user-info__login').forEach((username) => {
+  const userJoined = document.querySelector('.user-info__joined');
+  const date = new Date(createdAt);
+  userJoined.textContent = `
+    Joined ${date.getDate()} 
+    ${date.toLocaleDateString('default', {month: 'short'})}
+    ${date.getFullYear()}
+  `;
+
+  document.querySelectorAll('.user-info__login').forEach((username) => {
     username.textContent = `@${login}`;
   });
 
   const userBio = document.querySelector('.user-info__bio');
   userBio.textContent = bio;
 
-  const userStatistics = [public_repos, followers, following];
+  const userStatistics = [publicRepos, followers, following];
+  // eslint-disable-next-line max-len
   document.querySelectorAll('.user-statistics-item__count').forEach((item, index) => {
-    item.textContent = userStatistics[index]; 
+    item.textContent = userStatistics[index];
   });
 
-  const userFooterData = [location, twitter_username, html_url, company];
+  const userFooterData = [location, twitterUserName, htmlUrl, company];
+  // eslint-disable-next-line max-len
   document.querySelectorAll('.user-footer-item__title').forEach((item, index) => {
     if (userFooterData[index] === null) {
       item.textContent = 'Not Available';
@@ -70,10 +76,10 @@ const getSearchValue = () => {
       getDataUser(inputSearch).then((user) => {
         mappingUser(user);
         searchDanger.style.opacity = 0;
-      }); 
+      });
     }
 
-    document.querySelector('.search__input').value = "";
+    document.querySelector('.search__input').value = '';
   }
 
   btnSearch.addEventListener('click', handledSearchValue);
