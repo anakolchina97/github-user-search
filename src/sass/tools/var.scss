@@ -1,31 +1,31 @@
 body[data-theme='light'] {
-  --color-primary: #0079FF;
-  --colors-bg: #F6F8FF;
-  --colors-cover: #FEFEFE;
+  --color-primary: #0079ff;
+  --colors-bg: #f6f8ff;
+  --colors-cover: #fefefe;
   --colors-title: #222731;
-  --color-text: #4B6A9B;
-  --color-mood: #697C9A;
-  --color-bold: #2B3442;
+  --color-text: #4b6a9b;
+  --color-mood: #697c9a;
+  --color-bold: #2b3442;
   --colors-icon: var(--color-text);
-  --colors-disabled: rgba(75,106,155, 0.5);
+  --colors-disabled: rgba(75, 106, 155, 0.5);
   --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 
 body[data-theme='dark'] {
-  --color-primary: #0079FF;
-  --colors-bg: #141D2F;
-  --colors-cover: #1E2A47;
-  --colors-title: #FFFFFF;
-  --color-text: #FFFFFF;
-  --color-mood: #FFFFFF;
-  --color-bold: #FFFFFF;
+  --color-primary: #0079ff;
+  --colors-bg: #141d2f;
+  --colors-cover: #1e2a47;
+  --colors-title: #ffffff;
+  --color-text: #ffffff;
+  --color-mood: #ffffff;
+  --color-bold: #ffffff;
   --colors-icon: var(--color-text);
   --colors-disabled: rgba(255, 255, 255, 0.5);
   --shadow: none;
 }
 
-$button-primary-bg: #0079FF;
-$button-primary-color: #FFFFFF;
-$button-primary-bg-hover: #60ABFF;
+$button-primary-bg: #0079ff;
+$button-primary-color: #ffffff;
+$button-primary-bg-hover: #60abff;
 
-$danger-color: #F74646;
+$danger-color: #f74646;

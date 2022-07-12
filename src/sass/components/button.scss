@@ -1,9 +1,8 @@
-button.btn {
+.btn {
   border: none;
   outline: none;
   border-radius: 10px;
   cursor: pointer;
-
   &-primary {
     display: flex;
     align-items: center;
@@ -17,13 +16,11 @@ button.btn {
     font-size: 16px;
     line-height: 24px;
     transition: background 100ms linear;
-
     &:hover {
       background: $button-primary-bg-hover;
       transition: background 100ms linear;
     }
   }
-
   @media (max-width: 575px) {
     padding: 12px 16px;
     font-size: 14px;

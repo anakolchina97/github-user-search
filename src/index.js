@@ -19,7 +19,7 @@ const mappingUser = (value) => {
     location,
     html_url: htmlUrl,
     twitter_username: twitterUserName,
-    company
+    company,
   } = value;
 
   document.querySelectorAll('.user-card__photo img').forEach((photo) => {
@@ -33,7 +33,7 @@ const mappingUser = (value) => {
   const date = new Date(createdAt);
   userJoined.textContent = `
     Joined ${date.getDate()} 
-    ${date.toLocaleDateString('default', {month: 'short'})}
+    ${date.toLocaleDateString('default', { month: 'short' })}
     ${date.getFullYear()}
   `;
 
@@ -57,11 +57,11 @@ const mappingUser = (value) => {
       item.textContent = 'Not Available';
       item.parentElement.classList.add('disabled');
     } else {
-      item.textContent = userFooterData[index]
+      item.textContent = userFooterData[index];
       item.parentElement.classList.remove('disabled');
     }
   });
-}
+};
 
 const getSearchValue = () => {
   const btnSearch = document.querySelector('.search__btn');
@@ -80,12 +80,12 @@ const getSearchValue = () => {
     }
 
     document.querySelector('.search__input').value = '';
-  }
+  };
 
   btnSearch.addEventListener('click', handledSearchValue);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') handledSearchValue();
-  })
-}
+  });
+};
 
 getSearchValue();
