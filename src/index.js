@@ -1,8 +1,8 @@
-import './sass/index.scss';
-import '@babel/polyfill';
+import "./sass/index.scss";
+import "@babel/polyfill";
 
-import { switchMode } from './js/switchMode';
-import { getDataUser } from './js/getDataUser';
+import { switchMode } from "./js/switchMode";
+import { getDataUser } from "./js/getDataUser";
 
 switchMode();
 
@@ -22,53 +22,57 @@ const mappingUser = (value) => {
     company,
   } = value;
 
-  document.querySelectorAll('.user-card__photo img').forEach((photo) => {
-    photo.setAttribute('src', avatarUrl);
+  document.querySelectorAll(".user-card__photo img").forEach((photo) => {
+    photo.setAttribute("src", avatarUrl);
   });
 
-  const userFirstName = document.querySelector('.user-info__name');
+  const userFirstName = document.querySelector(".user-info__name");
   userFirstName.textContent = name;
 
-  const userJoined = document.querySelector('.user-info__joined');
+  const userJoined = document.querySelector(".user-info__joined");
   const date = new Date(createdAt);
   userJoined.textContent = `
     Joined ${date.getDate()} 
-    ${date.toLocaleDateString('default', { month: 'short' })}
+    ${date.toLocaleDateString("default", { month: "short" })}
     ${date.getFullYear()}
   `;
 
-  document.querySelectorAll('.user-info__login').forEach((username) => {
+  document.querySelectorAll(".user-info__login").forEach((username) => {
     username.textContent = `@${login}`;
   });
 
-  const userBio = document.querySelector('.user-info__bio');
+  const userBio = document.querySelector(".user-info__bio");
   userBio.textContent = bio;
 
   const userStatistics = [publicRepos, followers, following];
   // eslint-disable-next-line max-len
-  document.querySelectorAll('.user-statistics-item__count').forEach((item, index) => {
-    item.textContent = userStatistics[index];
-  });
+  document
+    .querySelectorAll(".user-statistics-item__count")
+    .forEach((item, index) => {
+      item.textContent = userStatistics[index];
+    });
 
   const userFooterData = [location, twitterUserName, htmlUrl, company];
   // eslint-disable-next-line max-len
-  document.querySelectorAll('.user-footer-item__title').forEach((item, index) => {
-    if (userFooterData[index] === null) {
-      item.textContent = 'Not Available';
-      item.parentElement.classList.add('disabled');
-    } else {
-      item.textContent = userFooterData[index];
-      item.parentElement.classList.remove('disabled');
-    }
-  });
+  document
+    .querySelectorAll(".user-footer-item__title")
+    .forEach((item, index) => {
+      if (userFooterData[index] === null) {
+        item.textContent = "Not Available";
+        item.parentElement.classList.add("disabled");
+      } else {
+        item.textContent = userFooterData[index];
+        item.parentElement.classList.remove("disabled");
+      }
+    });
 };
 
 const getSearchValue = () => {
-  const btnSearch = document.querySelector('.search__btn');
+  const btnSearch = document.querySelector(".search__btn");
 
   const handledSearchValue = () => {
-    const searchDanger = document.querySelector('.search__danger');
-    const inputSearch = document.querySelector('.search__input').value;
+    const searchDanger = document.querySelector(".search__danger");
+    const inputSearch = document.querySelector(".search__input").value;
 
     if (!inputSearch) {
       searchDanger.style.opacity = 1;
@@ -79,12 +83,12 @@ const getSearchValue = () => {
       });
     }
 
-    document.querySelector('.search__input').value = '';
+    document.querySelector(".search__input").value = "";
   };
 
-  btnSearch.addEventListener('click', handledSearchValue);
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') handledSearchValue();
+  btnSearch.addEventListener("click", handledSearchValue);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handledSearchValue();
   });
 };
 
