@@ -1,18 +1,18 @@
 // Fonts
-@import "./fonts/index.scss";
+@import "./fonts";
 
 // Libs
-@import "./libs/index.scss";
+@import "./libs";
 
 // Tools
-@import "./tools/var.scss";
+@import "./tools/var";
 
 // Global
-@import "./global/index..scss";
+@import "./global";
 
 // Components
-@import "./components/header.scss";
-@import "./components/mode.scss";
-@import "./components/search.scss";
-@import "./components/button.scss";
-@import "./components/user-card.scss";
+@import "./components/header";
+@import "./components/mode";
+@import "./components/search";
+@import "./components/button";
+@import "./components/user-card";
